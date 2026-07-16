@@ -17,9 +17,14 @@
         --gold: #ffd166;
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
-      html, body { min-height: 100%; }
+      html,
+      body {
+        min-height: 100%;
+      }
 
       body {
         margin: 0;
@@ -28,8 +33,16 @@
         color: var(--brown);
         font-family: "Cairo", sans-serif;
         background:
-          radial-gradient(circle at 12% 15%, rgba(255,255,255,.95) 0 3px, transparent 4px),
-          radial-gradient(circle at 85% 18%, rgba(255,255,255,.8) 0 4px, transparent 5px),
+          radial-gradient(
+            circle at 12% 15%,
+            rgba(255, 255, 255, 0.95) 0 3px,
+            transparent 4px
+          ),
+          radial-gradient(
+            circle at 85% 18%,
+            rgba(255, 255, 255, 0.8) 0 4px,
+            transparent 5px
+          ),
           linear-gradient(145deg, #fff1f6 0%, #ffc6dc 48%, #ffa7c8 100%);
       }
 
@@ -38,7 +51,12 @@
         position: fixed;
         inset: 0;
         pointer-events: none;
-        background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,.28) 40%, transparent 60%);
+        background: linear-gradient(
+          115deg,
+          transparent 20%,
+          rgba(255, 255, 255, 0.28) 40%,
+          transparent 60%
+        );
         animation: shimmer 8s linear infinite;
       }
 
@@ -58,7 +76,7 @@
         border-radius: 3px;
         background: var(--c);
         left: var(--x);
-        opacity: .85;
+        opacity: 0.85;
         animation: fall var(--d) var(--delay) linear infinite;
       }
 
@@ -75,19 +93,24 @@
         width: min(1050px, 100%);
         min-height: min(720px, calc(100vh - 60px));
         display: grid;
-        grid-template-columns: .9fr 1.1fr;
+        grid-template-columns: 0.9fr 1.1fr;
         align-items: center;
         gap: clamp(22px, 5vw, 65px);
         padding: clamp(30px, 5vw, 68px);
-        border: 1px solid rgba(255,255,255,.72);
+        border: 1px solid rgba(255, 255, 255, 0.72);
         border-radius: 42px;
-        background: rgba(255, 250, 252, .73);
-        box-shadow: 0 35px 80px rgba(175, 43, 94, .22), inset 0 1px 0 #fff;
+        background: rgba(255, 250, 252, 0.73);
+        box-shadow:
+          0 35px 80px rgba(175, 43, 94, 0.22),
+          inset 0 1px 0 #fff;
         backdrop-filter: blur(15px);
         overflow: hidden;
       }
 
-      .intro { text-align: center; animation: rise .9s .15s both; }
+      .intro {
+        text-align: center;
+        animation: rise 0.9s 0.15s both;
+      }
 
       .eyebrow {
         display: inline-flex;
@@ -98,8 +121,8 @@
         border-radius: 99px;
         color: #c72c69;
         background: #fff;
-        box-shadow: 0 7px 18px rgba(209, 58, 115, .12);
-        font-size: .78rem;
+        box-shadow: 0 7px 18px rgba(209, 58, 115, 0.12);
+        font-size: 0.78rem;
         font-weight: 700;
         letter-spacing: 1.5px;
       }
@@ -111,14 +134,16 @@
         font-size: clamp(2.7rem, 6vw, 5rem);
         line-height: 1.15;
         font-weight: 400;
-        text-shadow: 0 5px 0 #fff, 0 10px 20px rgba(196, 44, 103, .18);
+        text-shadow:
+          0 5px 0 #fff,
+          0 10px 20px rgba(196, 44, 103, 0.18);
       }
 
       .wish {
         margin: 12px auto 24px;
         max-width: 390px;
         color: #815364;
-        font-size: clamp(.92rem, 1.7vw, 1.08rem);
+        font-size: clamp(0.92rem, 1.7vw, 1.08rem);
         line-height: 1.9;
       }
 
@@ -133,18 +158,21 @@
       .date-row span {
         color: #a43863;
         font-weight: 800;
-        font-size: .9rem;
+        font-size: 0.9rem;
         letter-spacing: 2px;
       }
 
-      .date-row::before, .date-row::after {
+      .date-row::before,
+      .date-row::after {
         content: "";
         width: 48px;
         height: 1px;
         background: linear-gradient(90deg, transparent, #e886ab);
       }
 
-      .date-row::after { transform: rotate(180deg); }
+      .date-row::after {
+        transform: rotate(180deg);
+      }
 
       .portrait-wrap {
         position: relative;
@@ -156,7 +184,7 @@
         content: "";
         position: absolute;
         inset: -12px;
-        border: 2px dashed rgba(239, 47, 120, .38);
+        border: 2px dashed rgba(239, 47, 120, 0.38);
         border-radius: 38% 62% 54% 46% / 49% 44% 56% 51%;
         animation: spin 18s linear infinite;
       }
@@ -170,7 +198,7 @@
         border: 10px solid #fff;
         border-radius: 45% 55% 48% 52% / 52% 46% 54% 48%;
         background: white;
-        box-shadow: 0 20px 40px rgba(185, 46, 99, .22);
+        box-shadow: 0 20px 40px rgba(185, 46, 99, 0.22);
         animation: float 4s ease-in-out infinite;
       }
 
@@ -178,18 +206,27 @@
         position: absolute;
         z-index: 2;
         color: var(--pink);
-        filter: drop-shadow(0 4px 4px rgba(150,30,76,.15));
+        filter: drop-shadow(0 4px 4px rgba(150, 30, 76, 0.15));
         animation: pulse 1.6s ease-in-out infinite;
       }
-      .mini-heart.one { top: -21px; right: 13px; font-size: 27px; }
-      .mini-heart.two { bottom: 2px; left: -17px; font-size: 20px; animation-delay: .6s; }
+      .mini-heart.one {
+        top: -21px;
+        right: 13px;
+        font-size: 27px;
+      }
+      .mini-heart.two {
+        bottom: 2px;
+        left: -17px;
+        font-size: 20px;
+        animation-delay: 0.6s;
+      }
 
       .stage {
         position: relative;
         min-height: 580px;
         display: grid;
         place-items: center;
-        animation: rise .9s .35s both;
+        animation: rise 0.9s 0.35s both;
       }
 
       .halo {
@@ -197,7 +234,12 @@
         width: min(470px, 90vw);
         aspect-ratio: 1;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255,255,255,.88) 0 38%, rgba(255,220,233,.55) 39% 58%, transparent 59%);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.88) 0 38%,
+          rgba(255, 220, 233, 0.55) 39% 58%,
+          transparent 59%
+        );
         animation: breathe 4s ease-in-out infinite;
       }
 
@@ -214,28 +256,51 @@
 
       .topper {
         position: absolute;
-        top: 17px;
+        top: 8px;
+        left: 50%;
         z-index: 4;
-        color: var(--pink);
-        font-size: 78px;
-        line-height: 1;
+        width: 148px;
+        height: 112px;
+        display: grid;
+        place-items: center;
+        color: var(--hot-pink);
+        font-size: 64px;
+        line-height: 0.95;
         font-weight: 800;
-        letter-spacing: -9px;
-        text-shadow: 0 5px 0 white, 0 8px 18px rgba(183, 40, 95, .23);
-        animation: topperIn .8s 1.1s cubic-bezier(.2,.9,.3,1.3) both, float 3.5s 2s ease-in-out infinite;
+        letter-spacing: 0;
+        border: 7px solid white;
+        border-radius: 48% 52% 50% 50% / 55% 55% 45% 45%;
+        background:
+          radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.95) 0 18%, transparent 19%),
+          linear-gradient(145deg, #fff7fb 0%, #ffd2e4 46%, #ff8db8 100%);
+        box-shadow:
+          inset 0 -10px 20px rgba(224, 70, 128, 0.16),
+          0 10px 0 rgba(255, 255, 255, 0.72),
+          0 18px 34px rgba(183, 40, 95, 0.24);
+        text-shadow:
+          0 3px 0 white,
+          0 7px 14px rgba(183, 40, 95, 0.2);
+        animation:
+          topperIn 0.8s 1.1s cubic-bezier(0.2, 0.9, 0.3, 1.3) both,
+          topperFloat 3.5s 2s ease-in-out infinite;
       }
 
-      .topper::before, .topper::after {
+      .topper::before,
+      .topper::after {
         content: "";
         position: absolute;
-        top: 72px;
+        top: 101px;
         width: 3px;
-        height: 69px;
+        height: 56px;
         background: #bc6685;
         z-index: -1;
       }
-      .topper::before { left: 22px; }
-      .topper::after { right: 13px; }
+      .topper::before {
+        left: 37px;
+      }
+      .topper::after {
+        right: 37px;
+      }
 
       .flame {
         position: absolute;
@@ -244,10 +309,15 @@
         width: 20px;
         height: 32px;
         border-radius: 55% 45% 58% 42% / 70% 55% 45% 30%;
-        background: radial-gradient(circle at 50% 70%, #fff7a8 0 18%, #ffca45 20% 55%, #ff7b54 58%);
+        background: radial-gradient(
+          circle at 50% 70%,
+          #fff7a8 0 18%,
+          #ffca45 20% 55%,
+          #ff7b54 58%
+        );
         box-shadow: 0 0 26px #ffd261;
         transform-origin: center bottom;
-        animation: flicker .18s ease-in-out infinite alternate;
+        animation: flicker 0.18s ease-in-out infinite alternate;
       }
 
       .candle {
@@ -257,7 +327,11 @@
         width: 15px;
         height: 48px;
         border-radius: 6px 6px 2px 2px;
-        background: repeating-linear-gradient(135deg, white 0 7px, #ff669d 8px 14px);
+        background: repeating-linear-gradient(
+          135deg,
+          white 0 7px,
+          #ff669d 8px 14px
+        );
       }
 
       .cake-top {
@@ -267,9 +341,16 @@
         height: 95px;
         z-index: 3;
         border-radius: 50%;
-        background: radial-gradient(ellipse at 50% 35%, #fff 0 18%, #ffe0eb 50%, #f7a9c5 100%);
+        background: radial-gradient(
+          ellipse at 50% 35%,
+          #fff 0 18%,
+          #ffe0eb 50%,
+          #f7a9c5 100%
+        );
         border: 5px solid #fff6fa;
-        box-shadow: inset 0 -15px 28px rgba(224, 85, 137, .16), 0 8px 0 #e996b5;
+        box-shadow:
+          inset 0 -15px 28px rgba(224, 85, 137, 0.16),
+          0 8px 0 #e996b5;
       }
 
       .cake-body {
@@ -278,8 +359,16 @@
         width: 285px;
         height: 155px;
         border-radius: 8px 8px 42px 42px;
-        background: linear-gradient(90deg, #f7a8c5, #ffd2e2 18%, #ffc0d7 50%, #f39cbb 100%);
-        box-shadow: inset 0 -16px 30px rgba(182, 47, 98, .12), 0 20px 35px rgba(131, 48, 80, .2);
+        background: linear-gradient(
+          90deg,
+          #f7a8c5,
+          #ffd2e2 18%,
+          #ffc0d7 50%,
+          #f39cbb 100%
+        );
+        box-shadow:
+          inset 0 -16px 30px rgba(182, 47, 98, 0.12),
+          0 20px 35px rgba(131, 48, 80, 0.2);
         overflow: hidden;
       }
 
@@ -291,7 +380,8 @@
         border-radius: 0 0 45% 40%;
       }
 
-      .icing::before, .icing::after {
+      .icing::before,
+      .icing::after {
         content: "";
         position: absolute;
         top: 19px;
@@ -300,8 +390,13 @@
         border-radius: 0 0 20px 20px;
         background: #fff7fa;
       }
-      .icing::before { left: 47px; }
-      .icing::after { right: 57px; height: 60px; }
+      .icing::before {
+        left: 47px;
+      }
+      .icing::after {
+        right: 57px;
+        height: 60px;
+      }
 
       .cake-name {
         position: absolute;
@@ -310,11 +405,22 @@
         color: #fff;
         font-family: "Pacifico", cursive;
         font-size: 28px;
-        text-shadow: 0 2px 5px rgba(158, 42, 86, .25);
+        text-shadow: 0 2px 5px rgba(158, 42, 86, 0.25);
       }
 
-      .pearls { position: absolute; inset: auto 21px 14px; display: flex; justify-content: space-between; }
-      .pearls i { width: 11px; height: 11px; border-radius: 50%; background: #fff2a7; box-shadow: inset -2px -2px 2px #e8ad5b; }
+      .pearls {
+        position: absolute;
+        inset: auto 21px 14px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .pearls i {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #fff2a7;
+        box-shadow: inset -2px -2px 2px #e8ad5b;
+      }
 
       .plate {
         position: absolute;
@@ -323,13 +429,33 @@
         height: 55px;
         border-radius: 50%;
         background: linear-gradient(#fff, #ffd8e7);
-        box-shadow: 0 17px 25px rgba(142, 51, 86, .17), inset 0 -7px 0 #f0aac4;
+        box-shadow:
+          0 17px 25px rgba(142, 51, 86, 0.17),
+          inset 0 -7px 0 #f0aac4;
       }
 
-      .spark { position: absolute; z-index: 5; color: var(--gold); font-size: 27px; animation: sparkle 1.7s ease-in-out infinite; }
-      .spark.s1 { top: 105px; left: 27px; }
-      .spark.s2 { top: 207px; right: 5px; animation-delay: .5s; }
-      .spark.s3 { top: 53px; right: 39px; color: #ff7baa; animation-delay: 1s; }
+      .spark {
+        position: absolute;
+        z-index: 5;
+        color: var(--gold);
+        font-size: 27px;
+        animation: sparkle 1.7s ease-in-out infinite;
+      }
+      .spark.s1 {
+        top: 105px;
+        left: 27px;
+      }
+      .spark.s2 {
+        top: 207px;
+        right: 5px;
+        animation-delay: 0.5s;
+      }
+      .spark.s3 {
+        top: 53px;
+        right: 39px;
+        color: #ff7baa;
+        animation-delay: 1s;
+      }
 
       .music-btn {
         position: fixed;
@@ -340,17 +466,21 @@
         height: 54px;
         display: grid;
         place-items: center;
-        border: 1px solid rgba(255,255,255,.8);
+        border: 1px solid rgba(255, 255, 255, 0.8);
         border-radius: 50%;
         color: white;
         background: linear-gradient(145deg, #ff73a8, #e92e74);
-        box-shadow: 0 10px 25px rgba(183, 37, 93, .3);
+        box-shadow: 0 10px 25px rgba(183, 37, 93, 0.3);
         cursor: pointer;
         font-size: 21px;
-        transition: transform .2s ease;
+        transition: transform 0.2s ease;
       }
-      .music-btn:hover { transform: scale(1.08); }
-      .music-btn.playing { animation: musicPulse 1.5s ease-in-out infinite; }
+      .music-btn:hover {
+        transform: scale(1.08);
+      }
+      .music-btn.playing {
+        animation: musicPulse 1.5s ease-in-out infinite;
+      }
 
       .hint {
         position: fixed;
@@ -360,40 +490,139 @@
         padding: 8px 13px;
         border-radius: 12px;
         color: #9c315b;
-        background: rgba(255,255,255,.88);
-        box-shadow: 0 8px 20px rgba(140,43,80,.12);
-        font-size: .72rem;
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 8px 20px rgba(140, 43, 80, 0.12);
+        font-size: 0.72rem;
         opacity: 0;
         transform: translateX(-8px);
         animation: showHint 5s 1.5s both;
       }
 
-      @keyframes fall { to { transform: translate3d(var(--drift), 115vh, 0) rotate(720deg); } }
-      @keyframes shimmer { to { transform: translateX(50%); } }
-      @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
-      @keyframes spin { to { transform: rotate(360deg); } }
-      @keyframes float { 50% { transform: translateY(-9px) rotate(1deg); } }
-      @keyframes pulse { 50% { transform: scale(1.28) rotate(8deg); } }
-      @keyframes breathe { 50% { transform: scale(1.05); opacity: .8; } }
-      @keyframes topperIn { from { opacity: 0; transform: translateY(-60px) scale(.7); } }
-      @keyframes flicker { to { transform: scale(.92, 1.08) rotate(3deg); filter: brightness(1.12); } }
-      @keyframes sparkle { 50% { opacity: .25; transform: scale(.6) rotate(20deg); } }
-      @keyframes musicPulse { 50% { box-shadow: 0 0 0 9px rgba(255,79,145,.15), 0 10px 25px rgba(183,37,93,.3); } }
-      @keyframes showHint { 0%,100% { opacity: 0; } 12%,75% { opacity: 1; transform: none; } }
+      @keyframes fall {
+        to {
+          transform: translate3d(var(--drift), 115vh, 0) rotate(720deg);
+        }
+      }
+      @keyframes shimmer {
+        to {
+          transform: translateX(50%);
+        }
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes float {
+        50% {
+          transform: translateY(-9px) rotate(1deg);
+        }
+      }
+      @keyframes pulse {
+        50% {
+          transform: scale(1.28) rotate(8deg);
+        }
+      }
+      @keyframes breathe {
+        50% {
+          transform: scale(1.05);
+          opacity: 0.8;
+        }
+      }
+      @keyframes topperIn {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -60px) scale(0.7);
+        }
+        to {
+          transform: translate(-50%, 0) scale(1);
+        }
+      }
+      @keyframes topperFloat {
+        0%,
+        100% {
+          transform: translate(-50%, 0) rotate(0deg);
+        }
+        50% {
+          transform: translate(-50%, -9px) rotate(1deg);
+        }
+      }
+      @keyframes flicker {
+        to {
+          transform: scale(0.92, 1.08) rotate(3deg);
+          filter: brightness(1.12);
+        }
+      }
+      @keyframes sparkle {
+        50% {
+          opacity: 0.25;
+          transform: scale(0.6) rotate(20deg);
+        }
+      }
+      @keyframes musicPulse {
+        50% {
+          box-shadow:
+            0 0 0 9px rgba(255, 79, 145, 0.15),
+            0 10px 25px rgba(183, 37, 93, 0.3);
+        }
+      }
+      @keyframes showHint {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        12%,
+        75% {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
       @media (max-width: 760px) {
-        body { overflow: auto; }
-        .page { padding: 16px 12px 80px; }
-        .card { grid-template-columns: 1fr; padding: 36px 17px 18px; border-radius: 30px; gap: 6px; }
-        .portrait-wrap { width: 175px; margin-top: 22px; }
-        .stage { min-height: 500px; }
-        .cake-scene { transform: scale(.88); margin-top: -25px; }
-        .wish { margin-bottom: 16px; }
-        .hint { display: none; }
+        body {
+          overflow: auto;
+        }
+        .page {
+          padding: 16px 12px 80px;
+        }
+        .card {
+          grid-template-columns: 1fr;
+          padding: 36px 17px 18px;
+          border-radius: 30px;
+          gap: 6px;
+        }
+        .portrait-wrap {
+          width: 175px;
+          margin-top: 22px;
+        }
+        .stage {
+          min-height: 500px;
+        }
+        .cake-scene {
+          transform: scale(0.88);
+          margin-top: -25px;
+        }
+        .wish {
+          margin-bottom: 16px;
+        }
+        .hint {
+          display: none;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
       }
     </style>
   </head>
@@ -405,13 +634,17 @@
         <div class="intro">
           <div class="eyebrow">🎀 A SPECIAL DAY 🎀</div>
           <h1>Soso Kitty</h1>
-          <p class="wish">كل عام وأنتِ أجمل حكاية، وألطف قلب، وأحلى فرحة في كل سنة جديدة ✨</p>
+          <p class="wish">✨ Happy birthday ✨</p>
           <div class="date-row"><span>07 . 17</span></div>
 
           <div class="portrait-wrap">
             <span class="mini-heart one">♥</span>
             <span class="mini-heart two">♥</span>
-            <img class="portrait" src="image.png" alt="صورة Hello Kitty لعيد ميلاد Soso" />
+            <img
+              class="portrait"
+              src="image.png"
+              alt="صورة Hello Kitty لعيد ميلاد Soso"
+            />
           </div>
         </div>
 
@@ -438,35 +671,62 @@
       </section>
     </main>
 
-    <button class="music-btn" type="button" aria-label="تشغيل الموسيقى" title="تشغيل / إيقاف الموسيقى">♪</button>
+    <button
+      class="music-btn"
+      type="button"
+      aria-label="تشغيل الموسيقى"
+      title="تشغيل / إيقاف الموسيقى"
+    >
+      ♪
+    </button>
     <div class="hint">اضغطي لتشغيل موسيقى عيد الميلاد ♫</div>
 
     <script>
-      const confetti = document.querySelector('.confetti');
-      const colors = ['#ff4f91', '#ffd166', '#ffffff', '#a98bff', '#ff8fb8'];
+      const confetti = document.querySelector(".confetti");
+      const colors = ["#ff4f91", "#ffd166", "#ffffff", "#a98bff", "#ff8fb8"];
       for (let i = 0; i < 34; i++) {
-        const piece = document.createElement('i');
-        piece.style.setProperty('--x', Math.random() * 100 + '%');
-        piece.style.setProperty('--c', colors[i % colors.length]);
-        piece.style.setProperty('--d', 6 + Math.random() * 7 + 's');
-        piece.style.setProperty('--delay', -Math.random() * 10 + 's');
-        piece.style.setProperty('--drift', (Math.random() * 100 - 50) + 'px');
+        const piece = document.createElement("i");
+        piece.style.setProperty("--x", Math.random() * 100 + "%");
+        piece.style.setProperty("--c", colors[i % colors.length]);
+        piece.style.setProperty("--d", 6 + Math.random() * 7 + "s");
+        piece.style.setProperty("--delay", -Math.random() * 10 + "s");
+        piece.style.setProperty("--drift", Math.random() * 100 - 50 + "px");
         piece.style.transform = `rotate(${Math.random() * 180}deg)`;
         confetti.appendChild(piece);
       }
 
-      const button = document.querySelector('.music-btn');
+      const button = document.querySelector(".music-btn");
       let audioContext;
       let playing = false;
       let timer;
       let noteIndex = 0;
 
-      // لحن هادئ مستوحى من أجواء عيد الميلاد، يُنشأ داخل المتصفح بلا ملفات خارجية.
       const melody = [
-        [392, .36], [392, .18], [440, .54], [392, .54], [523.25, .54], [493.88, 1.0],
-        [392, .36], [392, .18], [440, .54], [392, .54], [587.33, .54], [523.25, 1.0],
-        [392, .36], [392, .18], [783.99, .54], [659.25, .54], [523.25, .54], [493.88, .54], [440, 1.0],
-        [698.46, .36], [698.46, .18], [659.25, .54], [523.25, .54], [587.33, .54], [523.25, 1.15]
+        [392, 0.36],
+        [392, 0.18],
+        [440, 0.54],
+        [392, 0.54],
+        [523.25, 0.54],
+        [493.88, 1.0],
+        [392, 0.36],
+        [392, 0.18],
+        [440, 0.54],
+        [392, 0.54],
+        [587.33, 0.54],
+        [523.25, 1.0],
+        [392, 0.36],
+        [392, 0.18],
+        [783.99, 0.54],
+        [659.25, 0.54],
+        [523.25, 0.54],
+        [493.88, 0.54],
+        [440, 1.0],
+        [698.46, 0.36],
+        [698.46, 0.18],
+        [659.25, 0.54],
+        [523.25, 0.54],
+        [587.33, 0.54],
+        [523.25, 1.15],
       ];
 
       function playNote(freq, duration) {
@@ -476,20 +736,22 @@
         const harmony = audioContext.createOscillator();
         const gain = audioContext.createGain();
         const harmonyGain = audioContext.createGain();
-        osc.type = 'sine';
-        harmony.type = 'triangle';
+        osc.type = "sine";
+        harmony.type = "triangle";
         osc.frequency.value = freq;
         harmony.frequency.value = freq / 2;
         gain.gain.setValueAtTime(0.0001, now);
-        gain.gain.exponentialRampToValueAtTime(0.09, now + .08);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration * .9);
+        gain.gain.exponentialRampToValueAtTime(0.09, now + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration * 0.9);
         harmonyGain.gain.setValueAtTime(0.0001, now);
-        harmonyGain.gain.exponentialRampToValueAtTime(0.025, now + .1);
+        harmonyGain.gain.exponentialRampToValueAtTime(0.025, now + 0.1);
         harmonyGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
         osc.connect(gain).connect(audioContext.destination);
         harmony.connect(harmonyGain).connect(audioContext.destination);
-        osc.start(now); harmony.start(now);
-        osc.stop(now + duration); harmony.stop(now + duration);
+        osc.start(now);
+        harmony.start(now);
+        osc.stop(now + duration);
+        harmony.stop(now + duration);
       }
 
       function nextNote() {
@@ -501,17 +763,23 @@
       }
 
       function toggleMusic() {
-        if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        if (audioContext.state === 'suspended') audioContext.resume();
+        if (!audioContext)
+          audioContext = new (
+            window.AudioContext || window.webkitAudioContext
+          )();
+        if (audioContext.state === "suspended") audioContext.resume();
         playing = !playing;
-        button.classList.toggle('playing', playing);
-        button.textContent = playing ? '❚❚' : '♪';
-        button.setAttribute('aria-label', playing ? 'إيقاف الموسيقى' : 'تشغيل الموسيقى');
+        button.classList.toggle("playing", playing);
+        button.textContent = playing ? "❚❚" : "♪";
+        button.setAttribute(
+          "aria-label",
+          playing ? "إيقاف الموسيقى" : "تشغيل الموسيقى",
+        );
         clearTimeout(timer);
         if (playing) nextNote();
       }
 
-      button.addEventListener('click', toggleMusic);
+      button.addEventListener("click", toggleMusic);
     </script>
   </body>
 </html>
